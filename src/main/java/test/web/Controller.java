@@ -48,6 +48,8 @@ public class Controller {
 
     @RequestMapping(method = RequestMethod.GET, path = "/ping")
     public ResponseEntity<String> ping() {
+        final String[] strings = {"a", "b", "c"};
+
         try {
             // Emulate latency, 3000 ms max
             Thread.sleep(new Random().nextInt(3000));
